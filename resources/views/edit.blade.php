@@ -35,7 +35,7 @@
       </div>
       <div class='form-group'>
         <label for='tags'>類別</label>
-        <input id=tags name=tags class='form-control' value='{{ implode(",",json_decode( $work->tags ?? "[]")) }}'></input>
+        <input id=tags name=tags class='form-control' value='{{ implode(",", (array)json_decode( $work->tags ?? "[]")) }}'></input>
       </div>
       <div class='form-group'>
         <label for='established_time'>顯示上稿時間</label>
