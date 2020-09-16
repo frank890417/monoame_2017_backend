@@ -8,5 +8,5 @@ class Work extends Model
 {
     //
     protected $fillable = 
-    ['title','content','tag','company','link','description','author','cover','established_time','created_at'];
+    ['title','content','tag','company','link','description','author','cover','established_time','created_at','tags'];
 }

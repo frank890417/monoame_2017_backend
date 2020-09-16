@@ -38,9 +38,12 @@ class WorkController extends Controller
     //儲存文章 
     public function store()
     {
+
       $input=Input::all();
       $input['established_time']= date("Y-m-d H:i:s");
       $input['content']=$this->html_cleaner($input['content']) ;
+      $tags = explode(",", $input['tags'] ?? '[]');
+      $input['tags'] = json_encode($tags );
       $work=Work::create($input);
       $work->save();
       return Redirect::to('work');
@@ -93,7 +96,10 @@ class WorkController extends Controller
     {
       $input=Input::all();
       $work=Work::find($id);
+      $tags = explode(",", $input['tags'] ?? '[]');
+      $input['tags'] = json_encode($tags );
       $input['content']=$this->html_cleaner($input['content']) ;
+      // dd($input);
       $work->update($input);
 
 
