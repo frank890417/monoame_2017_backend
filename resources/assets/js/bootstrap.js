@@ -18,7 +18,7 @@ require('bootstrap-sass');
  */
 
 window.Vue = require('vue');
-window.Dropzone = require('dropzone');
+window.Dropzone = require('dropzone').Dropzone;
 
 
 /**
