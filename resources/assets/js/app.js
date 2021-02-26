@@ -103,14 +103,14 @@ if (window.require_js.dropzone){
 
   gen_dz(".btn-dropzone",function(evt,res){
      console.log(res);
-     var imgurl=res.replace("/var/www/monoame2017/public/","https://build.monoame.com/dropzone/");
+     var imgurl=res.replace("/var/www/monoame2017/public/","https://build.monoame.com/");
      console.log(imgurl);
      tinymce.activeEditor.execCommand('mceInsertContent', false, '<img src=\"'+imgurl+'\" style=\"width: 100%;height: auto\"></img>');
   });
 
   gen_dz(".btn-dropzone-cover",function(evt,res){
      console.log(res);
-     var imgurl=res.replace("/var/www/monoame2017/public/","https://build.monoame.com/dropzone/");
+     var imgurl=res.replace("/var/www/monoame2017/public/","https://build.monoame.com/");
      console.log(imgurl);
      $("#cover").val(imgurl);
      $(".cover_preview").attr('src',imgurl);
