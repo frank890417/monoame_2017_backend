@@ -56,7 +56,7 @@
                     <!-- Right Side Of Navbar -->
                     <ul class="nav navbar-nav navbar-right">
                         <!-- Authentication Links -->
-                        <li><a href="http://monoame.com">前台網站</a></li>
+                        <li><a href="https://monoame.com">前台網站</a></li>
 
 
                         <!-- <li><a href="http://zashare.weebly.com/2015naughty.html" target="_blank">2015不太乖教育節</a></li>

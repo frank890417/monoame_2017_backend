@@ -82,7 +82,7 @@ if (window.require_js.dropzone){
   //初始化Dropzone上傳圖片function
   function gen_dz(classname,callback){  
     var myDropzone = new window.Dropzone(classname, {
-      url: "http://build.monoame.com/dropzone/upload.php",maxFiles: 1
+      url: "https://build.monoame.com/dropzone/upload.php",maxFiles: 1
       ,sending: function(){
         // vm.page_status="圖片上傳中<img src='../img/loadingicon_gold.png' class=loadingspin>";
       }
@@ -103,14 +103,14 @@ if (window.require_js.dropzone){
 
   gen_dz(".btn-dropzone",function(evt,res){
      console.log(res);
-     var imgurl=res.replace("/var/www/monoame2017/public/","http://build.monoame.com/dropzone/");
+     var imgurl=res.replace("/var/www/monoame2017/public/","https://build.monoame.com/dropzone/");
      console.log(imgurl);
      tinymce.activeEditor.execCommand('mceInsertContent', false, '<img src=\"'+imgurl+'\" style=\"width: 100%;height: auto\"></img>');
   });
 
   gen_dz(".btn-dropzone-cover",function(evt,res){
      console.log(res);
-     var imgurl=res.replace("/var/www/monoame2017/public/","http://build.monoame.com/dropzone/");
+     var imgurl=res.replace("/var/www/monoame2017/public/","https://build.monoame.com/dropzone/");
      console.log(imgurl);
      $("#cover").val(imgurl);
      $(".cover_preview").attr('src',imgurl);

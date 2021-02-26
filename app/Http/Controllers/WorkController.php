@@ -120,7 +120,7 @@ class WorkController extends Controller
     public function jsonall(){
         $works = Work::orderBy('id','desc')->get();
         foreach ($works as $work){
-          $work->content=str_replace("\"/dropzone","\"http://build.monoame.com/dropzone",$work->content);
+          $work->content=str_replace("\"/dropzone","\"https://build.monoame.com/dropzone",$work->content);
         }
         return $works;
     }
